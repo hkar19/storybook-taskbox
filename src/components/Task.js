@@ -1,11 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Task = ({
-  task: { id, title, state },
-  onArchiveTask,
-  onPinTask,
-}) => {
+const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
   return (
     <div className={`list-item ${state}`}>
       <label className="checkbox">
@@ -34,6 +30,8 @@ export const Task = ({
     </div>
   );
 };
+
+export default Task;
 
 Task.propTypes = {
   task: PropTypes.shape({
